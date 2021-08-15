@@ -1,0 +1,23 @@
+
+
+.storyes{
+    white-space: nowrap;
+    overflow-y:hidden;
+    overflow-x: scroll;
+    height:120px;
+    margin-top : 33px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    border: 1px solid rgba(172, 172, 172, 0.411);
+    grid-template-columns: 1fr;
+    border-radius: 3px;
+    
+}
+
+.story{
+    margin: 15px;
+    margin-bottom: 10px;
+    display:inline-block;
+    width: 69px;
+}

@@ -1,0 +1,93 @@
+.post{
+    border: 1px solid rgba(168, 168, 168, 0.432);
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    border-radius: 4px;
+}
+
+.post div{
+    width:100%;
+}
+
+.post_avatar_nickname{
+    display:grid;
+    grid-template-columns: 5em 1fr;
+}
+
+.post_avatar{
+    height: 50px;
+    width: 50px;
+    
+    object-fit: cover;
+
+    border-radius: 100%;
+
+    margin: 10px;
+}
+
+.post_nickname{
+    margin-top: auto;
+    margin-bottom: auto;
+
+    font-weight: bold;
+}
+
+.post_nickname:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.post_image{
+    width: 100%;
+    min-height: 400px;
+    max-height: 900px; 
+}
+
+.post_actions img {
+    margin: 5px;
+    margin-left: 10px;
+    height: 25px;
+}
+
+.post_comments{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post_userComment{
+    display: grid;
+    grid-template-columns: 3em 2fr 8em;
+
+    margin-bottom: 10px;
+}
+
+.post_userComment img{
+    height: 25px;
+    margin-left: 10px;
+}
+
+.post_userComment input{ 
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px solid;
+}
+
+.post_userComment button{
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+
+    color: rgb(79, 109, 243);
+    
+    font-weight: bold;
+
+}
+
+.post_userComment button:hover{
+    cursor: pointer;
+}
+
+
+
+
+
