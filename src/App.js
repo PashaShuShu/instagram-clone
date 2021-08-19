@@ -2,6 +2,7 @@ import classes from './App.module.css';
 import Navbar from './components/navbar/Navbar';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Home from './components/home/Home';
+import Profile from './components/profile/Profile';
 
 
 function App() {
@@ -14,12 +15,12 @@ function App() {
         <Route
           exact
           path="/"
-          render={()=>
-            true? 
-            <Redirect to="/home" />
-            :
-            <Redirect to="/login" />
-          }/>
+          render={() =>
+            true ?
+              <Redirect to="/home" />
+              :
+              <Redirect to="/login" />
+          } />
         <Route path="/home" >
           <Home />
         </Route>
@@ -33,7 +34,7 @@ function App() {
           likes
         </Route>
         <Route path="/profile/:userId?">
-          profile
+          <Profile />
         </Route>
         <Route path="/login">
           login

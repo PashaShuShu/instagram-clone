@@ -1,4 +1,5 @@
 import classes from './Navbar.module.css';
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import home from '../../icons/home.png';
 import chat from '../../icons/chat.png';
@@ -8,6 +9,17 @@ import logo from '../../icons/logo.png';
 import default_avatar from '../../icons/default_avatar.png';
 import searching_glass from '../../icons/searching_glass.png';
 const Navbar = () => {
+
+    const [smallScreenMode, setSmallScreenMode] = useState(true);
+
+    useState(() => {
+        if (window.innerWidth < 600) {
+            setSmallScreenMode(true)
+        } else {
+            setSmallScreenMode(false)
+        }
+    })
+
     return (
         <div className={classes.headerBorder}>
             <div className={classes.header}>
@@ -16,10 +28,18 @@ const Navbar = () => {
                         <img src={logo} alt="logo"></img>
                     </NavLink>
                 </span>
-                <span className={classes.search}>
-                    <input src={searching_glass} className={classes.search_input} placeholder="Поиск" type="text" />
-                </span>
+
+                {smallScreenMode ?
+                    null
+                    :
+                    <span className={classes.search}>
+                        <input src={searching_glass} className={classes.search_input} placeholder="Поиск" type="text" />
+                    </span>
+                }
+
+
                 <span className={classes.header_icons}>
+
                     <span>
                         <NavLink to="/home">
                             <img src={home} alt="home"></img>
@@ -46,6 +66,8 @@ const Navbar = () => {
                         </NavLink>
                     </span>
                 </span>
+
+
 
             </div>
         </div>
